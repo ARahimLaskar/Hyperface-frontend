@@ -1,0 +1,96 @@
+.nav-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  max-height: 103px;
+
+  display: flex;
+}
+#logo {
+  display: flex;
+  align-items: center;
+}
+#logo p {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.menu-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-container ul {
+  display: flex;
+  width: 65%;
+  list-style: none;
+  justify-content: space-evenly;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #673ab7;
+}
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 35%;
+  align-items: center;
+}
+.login-btn {
+  background-color: transparent;
+  font-size: 1.5rem;
+  border: none;
+  color: #673ab7;
+  cursor: pointer;
+}
+.details-btn {
+  font-size: 1.5rem;
+  max-width: 292px;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  background-color: #673ab7;
+  cursor: pointer;
+}
+.setting-icon {
+  border-left: 2px solid gray;
+  padding-left: 1rem;
+  margin-left: 0.5rem;
+}
+.spinner-container {
+  width: 20rem;
+  height: 20rem;
+  background-color: red;
+  clip-path: circle(10rem at 50% 50%);
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#spin-btn {
+  font-size: 1rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: #673ab7;
+  cursor: pointer;
+}
+#spin-btn::before {
+  content: "";
+  position: absolute;
+  background-color: rebeccapurple;
+  top: 50%;
+  left: 50%;
+  width: 20rem;
+  height: 20rem;
+  animation: spin 2s linear 60s;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+#spin-btn:active::before {
+  opacity: 1;
+}
